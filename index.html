@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="apps.js"></script>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Tip calculator app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <img src="images/logo.svg" alt="" />
+    </nav>
+    <main>
+      <div class="billarea">
+        <div class="Bill">Bill</div>
+        <img class="billImg" src="images/icon-dollar.svg" alt="" />
+        <textarea
+          class="ta"
+          id="bta"
+          name="Bill"
+          rows="1"
+          cols="10"
+          placeholder="0"
+        ></textarea>
+      </div>
+
+      <div class="tiparea">
+        <div class="selectTip">Select Tip %</div>
+        <div class="tipbtns">
+          <div onclick="SelectButton(this)" class="btn" id="tip5">5%</div>
+
+          <div onclick="SelectButton(this)" class="btn" id="tip10">10%</div>
+
+          <div onclick="SelectButton(this)" class="btn" id="tip15">15%</div>
+
+          <div onclick="SelectButton(this)" class="btn" id="tip25">25%</div>
+
+          <div onclick="SelectButton(this)" class="btn" id="tip50">50%</div>
+          <div onclick="SelectButton(this)" class="btn tpcustom" id="tipCustom">
+            <textarea
+              class="tipta"
+              id="tta"
+              name="customTip"
+              placeholder="Custom"
+              rows="1"
+            ></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="numPeople">
+        <img class="personImg" src="images/icon-person.svg" alt="" />
+        <div class="NPh">Number of People</div>
+        <div id="NPerror"></div>
+        <textarea
+          class="ta pta"
+          id="pta"
+          name="People"
+          rows="1"
+          cols="10"
+          placeholder="0"
+        ></textarea>
+      </div>
+      <div class="results">
+        <div class="res1">
+          <div>
+            <h1>Tip Amount</h1>
+            <p>/ person</p>
+          </div>
+          <div id="tipAmnt">$0.00</div>
+        </div>
+        <div class="res2">
+          <div>
+            <h1>Total</h1>
+            <p>/ person</p>
+          </div>
+          <div id="totAmnt">$0.00</div>
+        </div>
+        <div onclick="reset()" class="reset">Reset</div>
+      </div>
+    </main>
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Alex Johnson</a>.
+      </div>
+    </footer>
+  </body>
+</html>

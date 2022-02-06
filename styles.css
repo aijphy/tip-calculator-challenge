@@ -1,0 +1,238 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+
+:root {
+  --Strong-cyan: hsl(172, 67%, 45%);
+  --Very-dark-cyan: hsl(183, 100%, 15%);
+  --Dark-grayish-cyan1: hsl(186, 14%, 43%);
+  --Dark-grayish-cyan2: hsl(184, 14%, 56%);
+  --Light-grayish-cyan1: hsl(185, 41%, 84%);
+  --Light-grayish-cyan2: hsl(189, 41%, 97%);
+  --White: hsl(0, 0%, 100%);
+}
+body {
+  background-color: var(--Light-grayish-cyan1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+nav {
+  margin: 30px 00px;
+}
+main {
+  font-family: "Space Mono", monospace;
+  min-width: 300px;
+  font-size: 14px;
+  font-weight: 400;
+  background-color: var(--White);
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  padding: 0 5%;
+  /*display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;*/
+  color: var(--Dark-grayish-cyan2);
+
+  border-radius: 1.5rem;
+  padding-bottom: 40px;
+}
+
+textarea {
+  font-size: 24px;
+  font-weight: 700;
+  resize: none;
+  text-align: right;
+  font-family: "Space Mono", monospace;
+  background-color: var(--Light-grayish-cyan2);
+  color: var(--Very-dark-cyan);
+  border-style: none;
+  padding-right: 10px;
+  border-radius: 0.5rem;
+}
+textarea:focus {
+  outline-color: var(--Strong-cyan);
+}
+textarea:hover {
+  cursor: pointer;
+}
+.reset:hover {
+  cursor: pointer;
+
+  background-color: var(--Light-grayish-cyan1);
+}
+
+::placeholder {
+  color: var(--Dark-grayish-cyan2);
+}
+.billarea {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+}
+.billImg {
+  position: absolute;
+  margin-top: 33px;
+  margin-left: 10px;
+  height: 25%;
+}
+.tiparea {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.selectTip {
+  text-align: left;
+}
+.tipbtns {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 1rem;
+}
+.btn {
+  color: var(--White);
+  font-size: 20px;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--Very-dark-cyan);
+  border-radius: 0.5rem;
+}
+.btn:hover {
+  background-color: var(--Light-grayish-cyan1) !important;
+  color: var(--Very-dark-cyan) !important;
+  cursor: pointer;
+}
+.tpcustom {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+}
+.tipta {
+  background-color: var(--Light-grayish-cyan2);
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  text-align: right;
+  border-style: none !important;
+  border-radius: 0.5rem;
+}
+
+.numPeople {
+  position: relative;
+  margin: 20px 0;
+  display: grid;
+  grid-template-columns: 2fr 1.5fr;
+}
+.personImg {
+  position: absolute;
+  margin-top: 33px;
+  margin-left: 10px;
+  height: 25%;
+}
+.NPh {
+  text-align: left;
+}
+#NPerror {
+  text-align: right;
+}
+.pta {
+  grid-column: span 2;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.results {
+  background-color: var(--Very-dark-cyan);
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  border-radius: 1rem;
+}
+.res1 {
+  padding: 0 10px;
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.res2 {
+  padding: 0 10px 15px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  color: var(--White);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 14px;
+  height: 10px;
+}
+p {
+  font-size: 12px;
+  line-height: 12px;
+}
+
+#tipAmnt {
+  color: var(--Strong-cyan);
+  font-size: 24px;
+  font-weight: 700;
+}
+#totAmnt {
+  color: var(--Strong-cyan);
+  font-size: 24px;
+
+  font-weight: 700;
+}
+
+.reset {
+  width: 90%;
+  height: 40px;
+  margin: auto;
+  background-color: var(--Strong-cyan);
+  text-align: center;
+  color: var(--Very-dark-cyan);
+  border-radius: 0.5rem;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 40px;
+}
+
+@media screen and (min-width: 800px) {
+  main {
+    max-width: 800px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 20px;
+  }
+
+  .tipbtns {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  .billarea {
+    grid-column: span 1;
+  }
+  .results {
+    height: 80%;
+    grid-column: 2 / 3;
+    grid-row: 1 / 4;
+
+    grid-template-rows: repeat(4, 1fr);
+  }
+  .reset {
+    grid-row: 4 / 5;
+  }
+}
